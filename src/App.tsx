@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ItemList from './components/ItemList';
+import { Box } from '@mui/system';
+import ModalComp from './components/Modal';
+import { ToastContainer } from 'react-toastify'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Box sx = {{ display:"flex", justifyContent:"space-evenly", mt:"2rem", width:"100%"}} >
+      <ItemList/>
+      <ModalComp/>
+      </Box>  
+      <ToastContainer/>
+    </>
+      
   );
 }
 
